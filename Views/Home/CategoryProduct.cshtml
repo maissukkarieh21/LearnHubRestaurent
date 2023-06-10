@@ -1,0 +1,77 @@
+﻿@model IEnumerable<LearnHubRestaurent.Models.Product>
+
+@{
+    ViewData["Title"] = "CategoryProduct";
+    Layout = "~/Views/Shared/_Home_Layout.cshtml";
+}
+
+<!-- breadcrumb start-->
+<section class="breadcrumb breadcrumb_bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumb_iner text-center">
+                    <div class="breadcrumb_iner_item">
+                        <h2>Our Products</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- breadcrumb start-->
+<!--::chefs_part start::-->
+<section class="chefs_part blog_item_section section_padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-5">
+                <div class="section_tittle">
+                    <p>Team Member</p>
+                    <h2>Our Products</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            @foreach (var item in Model )
+            {
+                <div class="col-sm-6 col-lg-4">
+                    <div class="single_blog_item">
+                        <div class="single_blog_img">
+                            <img src="~/HomeAssets/img/team/chefs_1.png" alt="">
+                        </div>
+                        <div class="single_blog_text text-center">
+                            <h3>@item.Namee</h3>
+                            <p>Chef Master</p>
+                            <div class="social_icon">
+                                <a href="#"> <i class="ti-facebook"></i> </a>
+                                <a href="#"> <i class="ti-twitter-alt"></i> </a>
+                                <a href="#"> <i class="ti-instagram"></i> </a>
+                                <a href="#"> <i class="ti-skype"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+            
+            
+            <div class="col-sm-6 col-lg-4 d-none d-sm-block d-lg-none">
+                <div class="single_blog_item">
+                    <div class="single_blog_img">
+                        <img src="~/HomeAssets/img/team/chefs_1.png" alt="">
+                    </div>
+                    <div class="single_blog_text text-center">
+                        <h3>Justin Stuard</h3>
+                        <p>Chef Master</p>
+                        <div class="social_icon">
+                            <a href="#"> <i class="ti-facebook"></i> </a>
+                            <a href="#"> <i class="ti-twitter-alt"></i> </a>
+                            <a href="#"> <i class="ti-instagram"></i> </a>
+                            <a href="#"> <i class="ti-skype"></i> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--::chefs_part end::-->
